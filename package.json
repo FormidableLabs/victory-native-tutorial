@@ -1,0 +1,23 @@
+{
+  "name": "victory-native-tutorial",
+  "version": "0.0.1",
+  "description": "Native tutorial for Victory",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FormidableLabs/victory-native.git"
+  },
+  "author": "Lauren Eastridge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FormidableLabs/victory-native-tutorial/issues"
+  },
+  "homepage": "https://github.com/FormidableLabs/victory-native-tutorial#readme",
+  "scripts": {
+    "start": "./node_modules/react-native/packager/packager.sh start --reset-cache --projectRoots `pwd`,`pwd`/demo"
+  },
+  "dependencies": {
+    "react": "^15.3.0",
+    "react-dom": "^15.3.0",
+    "react-native": "~0.35.0"
+  }
+}
