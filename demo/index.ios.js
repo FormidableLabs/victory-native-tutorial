@@ -11,6 +11,7 @@ import {
   StyleSheet,
   Text
 } from "react-native";
+import { VictoryBar } from "victory-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -34,6 +35,7 @@ class Demo extends Component {
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.text}>{"Victory Tutorial"}</Text>
+        <VictoryBar/>
       </ScrollView>
     );
   }
