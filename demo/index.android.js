@@ -75,8 +75,16 @@ class Demo extends Component {
             dependentAxis
             tickFormat={(x) => (`$${x / 1000}k`)}
           />
-          <VictoryStack>
+          <VictoryStack
+            style={{
+              data: { width: 15, stroke: "white", strokeWidth: 2 }
+            }}
+            colorScale={["cyan", "gold", "orange", "tomato"]}
+          >
             <VictoryBar
+              style={{
+                data: { width: 13, strokeWidth: 0, fill: "navy"}
+              }}
               data={data2012}
               x={"quarter"}
               y={"earnings"}
