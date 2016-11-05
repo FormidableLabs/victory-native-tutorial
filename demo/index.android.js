@@ -13,7 +13,6 @@ import {
 } from "react-native";
 import { VictoryBar } from "victory-native";
 
-
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
@@ -31,12 +30,26 @@ const styles = StyleSheet.create({
   }
 });
 
+const data = [
+  {quarter: 1, earnings: 13000},
+  {quarter: 2, earnings: 16500},
+  {quarter: 3, earnings: 14250},
+  {quarter: 4, earnings: 19000}
+];
+
 class Demo extends Component {
   render() {
     return (
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.text}>{"Victory Tutorial"}</Text>
-        <VictoryBar/>
+        <VictoryBar
+          style={{
+            data: {fill: "blue"}
+          }}
+          data={data}
+          x={"quarter"}
+          y={"earnings"}
+        />
       </ScrollView>
     );
   }
