@@ -11,7 +11,7 @@ import {
   StyleSheet,
   Text
 } from "react-native";
-import { VictoryAxis, VictoryBar, VictoryChart, VictoryStack, VictoryTheme } from "victory-native";
+import { VictoryAxis, VictoryArea, VictoryChart, VictoryStack, VictoryTheme } from "victory-native";
 
 const styles = StyleSheet.create({
   container: {
@@ -64,7 +64,6 @@ class Demo extends Component {
       <ScrollView contentContainerStyle={styles.container}>
         <Text style={styles.text}>{"Victory Tutorial"}</Text>
         <VictoryChart
-          domainPadding={40}
           theme={VictoryTheme.material}
         >
           <VictoryAxis
@@ -77,29 +76,29 @@ class Demo extends Component {
           />
           <VictoryStack
             style={{
-              data: { width: 15, stroke: "white", strokeWidth: 2 }
+              data: { stroke: "white", strokeWidth: 4 }
             }}
             colorScale={["cyan", "gold", "orange", "tomato"]}
           >
-            <VictoryBar
+            <VictoryArea
               style={{
-                data: { width: 13, strokeWidth: 0, fill: "navy"}
+                data: { fill: "navy" }
               }}
               data={data2012}
               x={"quarter"}
               y={"earnings"}
             />
-            <VictoryBar
+            <VictoryArea
               data={data2013}
               x={"quarter"}
               y={"earnings"}
             />
-            <VictoryBar
+            <VictoryArea
               data={data2014}
               x={"quarter"}
               y={"earnings"}
             />
-            <VictoryBar
+            <VictoryArea
               data={data2015}
               x={"quarter"}
               y={"earnings"}
